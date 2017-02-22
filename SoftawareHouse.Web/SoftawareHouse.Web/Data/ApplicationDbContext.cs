@@ -4,7 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using SoftawareHouse.Web.Models;
+using SoftawareHouse.Web.Data.Models;
+using SoftawareHouse.Web.Identity.Models;
 
 namespace SoftawareHouse.Web.Data
 {

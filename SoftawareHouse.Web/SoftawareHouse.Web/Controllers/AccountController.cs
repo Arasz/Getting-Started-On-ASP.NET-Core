@@ -9,9 +9,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using SoftawareHouse.Web.Models;
-using SoftawareHouse.Web.Models.AccountViewModels;
-using SoftawareHouse.Web.Services;
+using SoftawareHouse.Web.Data;
+using SoftawareHouse.Web.Data.Models;
+using SoftawareHouse.Web.Identity.Models;
+using SoftawareHouse.Web.Identity.Models.AccountViewModels;
+using SoftawareHouse.Web.Identity.Services;
 
 namespace SoftawareHouse.Web.Controllers
 {
