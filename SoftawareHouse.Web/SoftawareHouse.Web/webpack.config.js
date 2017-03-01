@@ -1,4 +1,3 @@
-ack.config.jsJavaScript
 
 const { CheckerPlugin } = require('awesome-typescript-loader');
 const path = require('path');
