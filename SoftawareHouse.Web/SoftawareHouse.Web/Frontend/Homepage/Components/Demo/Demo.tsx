@@ -1,4 +1,5 @@
 ﻿import * as React from "react";
+import "./Demo.scss";
 
 class Demo extends React.Component<any, any> {
 
