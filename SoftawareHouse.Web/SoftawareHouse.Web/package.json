@@ -1,0 +1,27 @@
+{
+  "name": "software-house",
+  "version": "0.0.1",
+  "description": "Getting started with asp.net core and react",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arasz/Getting-Started-On-ASP.NET-Core"
+  },
+  "scripts": {},
+  "author": "Arasz",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.1.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "@types/react": "^15.0.13",
+    "@types/react-dom": "^0.14.23",
+    "typescript": "^2.2.1",
+    "webpack": "^2.2.1"
+  },
+  "engines": {
+    "node": ">=6.9.5"
+  },
+  "license": ""
+}
