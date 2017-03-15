@@ -11,7 +11,7 @@ const paths = {
 const config = {
     entry: {
         // Bundles used on specific pages
-        homepage: "./Frontend/Homepage/Index.tsx",
+        homepage: "./Frontend/Homepage/index.tsx",
         // Common libraries
         libs: [
             "bootstrap",
