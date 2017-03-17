@@ -12,8 +12,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using SoftawareHouse.Web.Identity.Models;
 using SoftawareHouse.Web.Identity.Services;
+using SoftwareHouse.Contracts.Repositories;
+using SoftwareHouse.Contracts.Services;
 using SoftwareHouse.DataAccess;
 using SoftwareHouse.DataAccess.Models;
+using SoftwareHouse.DataAccess.Repositories;
+using SoftwareHouse.Services.Services;
 
 namespace SoftawareHouse.Web
 {
@@ -48,6 +52,10 @@ namespace SoftawareHouse.Web
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+
+            services
+                .AddScoped<IProjectsRepository, ProjectsRepository>()
+                .AddScoped<IProjectsService, ProjectsService>();
 
             services.AddMvc();
 
