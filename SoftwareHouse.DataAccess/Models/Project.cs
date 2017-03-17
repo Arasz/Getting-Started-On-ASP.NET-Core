@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SoftawareHouse.Web.Data.Models
+namespace SoftwareHouse.DataAccess.Models
 {
     public class Project
     {

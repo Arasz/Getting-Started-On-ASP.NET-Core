@@ -7,11 +7,10 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using SoftawareHouse.Web.Data;
-using SoftawareHouse.Web.Data.Models;
 using SoftawareHouse.Web.Identity.Models;
 using SoftawareHouse.Web.Identity.Models.ManageViewModels;
 using SoftawareHouse.Web.Identity.Services;
+using SoftwareHouse.DataAccess.Models;
 
 namespace SoftawareHouse.Web.Controllers
 {

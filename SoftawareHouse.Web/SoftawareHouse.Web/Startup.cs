@@ -10,10 +10,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using SoftawareHouse.Web.Data;
-using SoftawareHouse.Web.Data.Models;
 using SoftawareHouse.Web.Identity.Models;
 using SoftawareHouse.Web.Identity.Services;
+using SoftwareHouse.DataAccess;
+using SoftwareHouse.DataAccess.Models;
 
 namespace SoftawareHouse.Web
 {
