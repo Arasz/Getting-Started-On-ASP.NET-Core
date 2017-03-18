@@ -9,5 +9,7 @@ namespace SoftwareHouse.Contracts.Services
         IList<ProjectDto> GetAllActive();
 
         CommonResult<ProjectDto> GetById(int id);
+
+        CommonResult Add(AddProjectDto project);
     }
 }

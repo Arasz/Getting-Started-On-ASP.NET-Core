@@ -8,5 +8,7 @@ namespace SoftwareHouse.Contracts.Repositories
         IList<ProjectDto> GetAllActive();
 
         ProjectDto GetById(int id);
+        void Add(AddProjectDto project);
+        ProjectDto GetByName(string projectName);
     }
 }

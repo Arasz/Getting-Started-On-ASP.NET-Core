@@ -22,6 +22,13 @@ namespace SoftwareHouse.DataAccess
 
             builder.Entity<Project>()
                 .HasKey(project => project.Id);
+
+            builder.Entity<Project>()
+                .Property(project => project.Name)
+                .IsRequired();
+
+            builder.Entity<Project>()
+                .HasAlternateKey(project => project.Name);
         }
     }
 }

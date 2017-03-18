@@ -26,5 +26,23 @@ namespace SoftwareHouse.Services.Services
 
             return CommonResult<ProjectDto>.Success(project);
         }
+
+        public CommonResult Add(AddProjectDto project)
+        {
+            //TODO: Move validation to separate class (for now I am keeping it as simple as possible)
+            if(string.IsNullOrEmpty(project.Name))
+                return CommonResult.Failure("Cannot create project without name");
+            if(string.IsNullOrEmpty(project.Description))
+                return CommonResult.Failure("Cannot create project without description");
+
+            var existingProject = _projectsRepository.GetByName(project.Name);
+
+            if(existingProject != null && !existingProject.IsDeleted)
+                return CommonResult.Failure("Project with given name already exist");
+
+            _projectsRepository.Add(project);
+
+            return CommonResult.Success();
+        }
     }
 }
