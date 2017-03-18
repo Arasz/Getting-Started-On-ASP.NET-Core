@@ -52,6 +52,18 @@ namespace SoftwareHouse.DataAccess.Repositories
             return Map(existingProject);
         }
 
+        public bool Exist(int id) => _applicationDbContext.Projects.Any(project => project.Id == id);
+
+        public void SoftDelete(int id)
+        {
+            var projectToDelete = _applicationDbContext.Projects.Single(project => project.Id == id);
+
+            projectToDelete.IsDeleted = true;
+
+            _applicationDbContext.Projects.Update(projectToDelete);
+            _applicationDbContext.SaveChanges();
+        }
+
         private  ProjectDto Map(Project project) => new ProjectDto
         {
             Id = project.Id,

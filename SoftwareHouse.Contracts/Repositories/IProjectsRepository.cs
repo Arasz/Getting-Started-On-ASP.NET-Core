@@ -10,5 +10,9 @@ namespace SoftwareHouse.Contracts.Repositories
         ProjectDto GetById(int id);
         void Add(AddProjectDto project);
         ProjectDto GetByName(string projectName);
+
+        bool Exist(int id);
+
+        void SoftDelete(int id);
     }
 }

@@ -6,6 +6,8 @@ namespace SoftwareHouse.Contracts.Services
 {
     public interface IProjectsService
     {
+        CommonResult SoftlyDelete(int projectId);
+
         IList<ProjectDto> GetAllActive();
 
         CommonResult<ProjectDto> GetById(int id);

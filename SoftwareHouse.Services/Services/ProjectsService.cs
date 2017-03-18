@@ -15,6 +15,15 @@ namespace SoftwareHouse.Services.Services
             _projectsRepository = projectsRepository;
         }
 
+        public CommonResult SoftlyDelete(int projectId)
+        {
+            if(!_projectsRepository.Exist(projectId))
+                return CommonResult.Failure("Project with given id doesn't exist");
+
+            _projectsRepository.SoftDelete(projectId);
+            return CommonResult.Success();
+        }
+
         public IList<ProjectDto> GetAllActive() => _projectsRepository.GetAllActive();
 
         public CommonResult<ProjectDto> GetById(int id)
