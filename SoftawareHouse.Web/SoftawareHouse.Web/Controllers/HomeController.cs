@@ -10,19 +10,20 @@ namespace SoftawareHouse.Web.Controllers
     {
         public IActionResult Index()
         {
+            ViewData["Title"] = "Home page";
             return View();
         }
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "Software house project manager.";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "https://github.com/Arasz";
 
             return View();
         }

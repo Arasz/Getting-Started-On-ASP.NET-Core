@@ -11,6 +11,10 @@
   <PropertyGroup>
     <UserSecretsId>aspnet-SoftawareHouse.Web-1690bf1d-7a9f-4eda-8b04-612bf0e03fc0</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\images\7cede573-0d3c-4271-945c-c58ea0ba749f.png" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />
@@ -31,6 +35,10 @@
     <ProjectReference Include="..\..\SoftwareHouse.Contracts\SoftwareHouse.Contracts.csproj" />
     <ProjectReference Include="..\..\SoftwareHouse.DataAccess\SoftwareHouse.DataAccess.csproj" />
     <ProjectReference Include="..\..\SoftwareHouse.Services\SoftwareHouse.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Frontend\Projects\" />
+    <Folder Include="Frontend\Shared\Components\" />
   </ItemGroup>
 
 </Project>
