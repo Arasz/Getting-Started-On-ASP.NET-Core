@@ -1,8 +1,9 @@
 ﻿import * as React from "react";
+import Project from "../../Models/Project";
 
 interface IProjectsListContainerState {
     loadingData: boolean;
-    projects: any[];
+    projects: Project[];
 }
 
 class ProjectsListContainer extends  React.Component<any, IProjectsListContainerState>{
@@ -12,7 +13,7 @@ class ProjectsListContainer extends  React.Component<any, IProjectsListContainer
 
         this.state = {
             loadingData: true,
-            projects: []
+            projects: Project[]
         };
     }
 
