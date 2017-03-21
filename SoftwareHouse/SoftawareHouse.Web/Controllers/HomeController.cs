@@ -10,6 +10,9 @@ namespace SoftawareHouse.Web.Controllers
     {
         public IActionResult Index()
         {
+            if (User.Identity.IsAuthenticated)
+                return RedirectToAction(nameof(ProjectsController.Index), "Projects");
+
             ViewData["Title"] = "Home page";
             return View();
         }
