@@ -32,7 +32,6 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0-msbuild3-final" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Frontend\Projects\" />
     <Folder Include="Frontend\Shared\Components\" />
   </ItemGroup>
   <ItemGroup>
