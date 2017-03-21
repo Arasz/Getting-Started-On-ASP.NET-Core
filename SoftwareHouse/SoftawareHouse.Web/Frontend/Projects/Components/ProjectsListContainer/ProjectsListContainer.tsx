@@ -20,7 +20,7 @@ class ProjectsListContainer extends  React.Component<any, IProjectsListContainer
         const hasProjects = this.state.projects.length > 0;
 
         if (hasProjects)
-            return <p>Projects list</p>;
+            return <p className="text-center">Projects list</p>;
         else {
             return <p className="text-center">No data</p>;
         }

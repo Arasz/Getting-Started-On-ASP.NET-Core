@@ -15,6 +15,7 @@ const config = {
         // Common libraries
 
         home: "./Frontend/Home/home.scss",
+        projects: "./Frontend/Projects/index.tsx",
 
         libs: [
             "bootstrap",
