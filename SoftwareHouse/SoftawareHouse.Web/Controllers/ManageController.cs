@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using SoftawareHouse.Web.Identity.Models;
 using SoftawareHouse.Web.Identity.Models.ManageViewModels;
 using SoftawareHouse.Web.Identity.Services;
 using SoftwareHouse.DataAccess.Models;
