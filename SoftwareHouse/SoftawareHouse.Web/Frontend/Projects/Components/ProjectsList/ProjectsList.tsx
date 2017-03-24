@@ -17,7 +17,7 @@ class ProjectsList extends React.Component<IProjectsListProps,any>{
         return (
             <section className="ProjectList row">
                 <div className="col-md-8 col-md-push-2">
-                    {this.props.projects.map(project => <ProjectElement model={project}/>)}
+                    {this.props.projects.map((project) => <ProjectListItem project={project} key={project.Id}/>)}
                 </div>
             </section>
         );

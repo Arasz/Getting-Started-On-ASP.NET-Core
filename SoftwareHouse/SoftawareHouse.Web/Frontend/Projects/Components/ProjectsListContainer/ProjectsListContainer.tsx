@@ -1,6 +1,8 @@
 ﻿import * as React from "react";
 import Project from "../../Models/Project";
 import EmptyListWarning from "../EmptyListWarning/EmptyListWarning";
+import ProjectsList from "../ProjectsList/ProjectsList";
+
 
 interface IProjectsListContainerState {
     loadingData: boolean;
@@ -41,9 +43,9 @@ class ProjectsListContainer extends React.Component<any, IProjectsListContainerS
         const hasProjects = this.state.projects.length > 0;
 
         if (hasProjects)
-            return <p className="text-center">Projects list</p>;
+            return <ProjectsList projects={this.state.projects} />
         else {
-            return <EmptyListWarning/>
+            return <EmptyListWarning />
         }
     }
 
