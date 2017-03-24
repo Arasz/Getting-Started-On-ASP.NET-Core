@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using SoftawareHouse.Web.ViewModels;
+using SoftwareHouse.Contracts.DataContracts;
 using SoftwareHouse.Contracts.Services;
 
 namespace SoftawareHouse.Web.Controllers
@@ -19,6 +21,29 @@ namespace SoftawareHouse.Web.Controllers
         {
             ViewData["Title"] = "Projects";
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Add() => View(new ProjectCreateViewModel());
+
+        [HttpPost]
+        public IActionResult Add(ProjectCreateViewModel projectViewModel)
+        {
+
+            var result = _projectsService.Add(new AddProjectDto
+            {
+                Name = projectViewModel.Name,
+                Description = projectViewModel.Description,
+            });
+
+            if (result.IsSuccess)
+                return RedirectToAction(nameof(Index), "Projects");
+            else
+            {
+                projectViewModel.ErrorMessage = result.ErrorMessage;
+                return View(projectViewModel);
+            }
+
         }
     }
 }
