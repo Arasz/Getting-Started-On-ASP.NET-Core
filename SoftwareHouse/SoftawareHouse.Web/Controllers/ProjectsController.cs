@@ -16,6 +16,31 @@ namespace SoftawareHouse.Web.Controllers
             _projectsService = projectsService;
         }
 
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            _projectsService.SoftlyDelete(id);
+
+            return RedirectToAction(nameof(Index), "Projects");
+        }
+
+        [HttpGet]
+        public IActionResult Details(int id)
+        {
+            var result = _projectsService.GetById(id);
+
+            var fetchedProject = result.ResultData;
+
+            return View(new ProjectViewModel
+            {
+                Id = fetchedProject.Id,
+                Name = fetchedProject.Name,
+                Description = fetchedProject.Description,
+                CreationDate = fetchedProject.CreationDate
+            });
+
+        }
+
         [HttpGet]
         public IActionResult Index()
         {
