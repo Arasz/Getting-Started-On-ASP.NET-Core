@@ -38,12 +38,9 @@ namespace SoftawareHouse.Web.Controllers
 
             if (result.IsSuccess)
                 return RedirectToAction(nameof(Index), "Projects");
-            else
-            {
-                projectViewModel.ErrorMessage = result.ErrorMessage;
-                return View(projectViewModel);
-            }
 
+            projectViewModel.ErrorMessage = result.ErrorMessage;
+            return View(projectViewModel);
         }
     }
 }
