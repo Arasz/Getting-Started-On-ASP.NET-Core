@@ -2,27 +2,29 @@ import * as React from "react";
 import "./ProjectsList.scss";
 import "../../../Shared/Styles/common.scss";
 import Project from "../../Models/Project";
+import ProjectsListItem from "../ProjectsListItem/ProjectsListItem";
+import ProjectsListSummary from "../ProjectsListSummary/ProjectsListSummary";
 
-interface IProjectsListProps{
-    projects : Project[];
+interface IProjectsListProps {
+    projects: Project[];
 }
 
-class ProjectsList extends React.Component<IProjectsListProps,any>{
+class ProjectsList extends React.Component<IProjectsListProps, any>{
 
-    constructor(props){
+    constructor(props) {
         super(props);
     }
 
-    public render() : any {
+    public render(): any {
         return (
             <section className="ProjectList row">
                 <div className="col-md-8 col-md-push-2">
-                    {this.props.projects.map((project) => <ProjectListItem project={project} key={project.Id}/>)}
+                    <ProjectsListSummary projects={this.props.projects} />
+                    {this.props.projects.map(project => <ProjectsListItem key={project.id} project={project}/>)}
                 </div>
             </section>
         );
-
-    }
+        }
 }
 
 export default ProjectsList;

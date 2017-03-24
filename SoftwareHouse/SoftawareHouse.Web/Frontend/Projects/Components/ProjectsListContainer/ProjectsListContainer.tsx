@@ -6,7 +6,7 @@ import ProjectsList from "../ProjectsList/ProjectsList";
 
 interface IProjectsListContainerState {
     loadingData: boolean;
-    projects: Array<Project>;
+    projects: Project[];
 }
 
 class ProjectsListContainer extends React.Component<any, IProjectsListContainerState>{
@@ -16,7 +16,7 @@ class ProjectsListContainer extends React.Component<any, IProjectsListContainerS
 
         this.state = {
             loadingData: true,
-            projects: new Array<Project>()
+            projects: [] as Project [],
         };
     }
 
@@ -31,7 +31,8 @@ class ProjectsListContainer extends React.Component<any, IProjectsListContainerS
             .then((response) => {
                 return response.text();
             })
-            .then((data) => {
+            .then((data) => {    
+                console.log(JSON.parse(data));            
                 this.setState({
                     loadingData: false,
                     projects: JSON.parse(data),
